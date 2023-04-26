@@ -1,3 +1,4 @@
+import java.util.Objects;
 public class Author {
     private String name;
     private String lastName;
@@ -23,12 +24,12 @@ public class Author {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Author author = (Author) o;
-        return java.util.Objects.equals(name, author.name) &&
-                java.util.Objects.equals(lastName, author.lastName);
+        return Objects.equals(name, author.name) &&
+                Objects.equals(lastName, author.lastName);
     }
 
     @Override
     public int hashCode() {
-        return java.util.Objects.hash(name, lastName);
+        return Objects.hash(name, lastName);
     }
 }
